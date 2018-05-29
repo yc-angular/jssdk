@@ -1,0 +1,28 @@
+{
+  "name": "@yca/jssdk",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yc-angular/jssdk.git"
+  },
+  "author": {
+    "name": "Yu Chen",
+    "email": "yu.chen@live.ie"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yc-angular/jssdk.git/issues"
+  },
+  "main": "jssdk.umd.js",
+  "module": "jssdk.js",
+  "jsnext:main": "jssdk.js",
+  "typings": "jssdk.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}
