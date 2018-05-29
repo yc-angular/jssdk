@@ -1,6 +1,6 @@
 {
   "name": "@yca/jssdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/yc-angular/jssdk.git"
@@ -21,8 +21,7 @@
   "jsnext:main": "jssdk.js",
   "typings": "jssdk.d.ts",
   "peerDependencies": {
-    "@angular/core": "^4.0.0",
-    "rxjs": "^5.1.0",
-    "zone.js": "^0.8.4"
+    "@angular/core": ">=4.0.0",
+    "@yct/jssdk": ">=1.0.3"
   }
 }
