@@ -38,7 +38,7 @@ import { JSSDKModule } from '@yca/jssdk';
     BrowserModule,
 
     // Specify your library as an import
-    JSSDKModule.forRoot('appid', 'debug or not')
+    JSSDKModule.forRoot('appid', 'debug or not', 'use https or not'),
   ],
   providers: [],
   bootstrap: [AppComponent]
