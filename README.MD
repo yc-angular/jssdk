@@ -1,5 +1,8 @@
 # @yca/jssdk
 
+## Intro
+This is a angular wrap for [@yct/jssdk](https://github.com/yc-typescript/jssdk.git)
+
 ## Installation
 
 To install this library, run:
@@ -25,7 +28,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { SampleModule } from '@yca/jssdk';
+import { JSSDKModule } from '@yca/jssdk';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,7 @@ import { SampleModule } from '@yca/jssdk';
     BrowserModule,
 
     // Specify your library as an import
-    LibraryModule
+    JSSDKModule.forRoot('appid', 'debug or not')
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -43,14 +46,33 @@ import { SampleModule } from '@yca/jssdk';
 export class AppModule { }
 ```
 
-Once your library is imported, you can use its components, directives and pipes in your Angular application:
+Once your library is imported, you can use its services in your Angular application:
 
-```xml
-<!-- You can now use your library component in app.component.html -->
-<h1>
-  {{title}}
-</h1>
-<sampleComponent></sampleComponent>
+```ts
+import { JSSDK }  from '@yca/jssdk';
+
+declare const window: any;
+
+@Component({
+  selector: 'app',
+  template: `<h1>Hello</h1>`
+})
+class AppComponent {
+  constructor(
+    public jssdk: JSSDK,
+  ) {
+  }
+
+  async ngOnInit() {
+    try {
+      console.log(this.jssdk.appId);
+      await this.jssdk.ready();
+      console.log(window.wx);
+    } catch(e) {
+      console.error(e);
+    }
+  }
+}
 ```
 
 ## Development
