@@ -1,6 +1,6 @@
 {
   "name": "@yca/jssdk",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "scripts": {
     "build": "gulp build",
     "build:watch": "gulp",
@@ -74,6 +74,6 @@
     "node": ">=6.0.0"
   },
   "dependencies": {
-    "@yct/jssdk": "^1.0.1"
+    "@yct/jssdk": "^1.0.4"
   }
 }
